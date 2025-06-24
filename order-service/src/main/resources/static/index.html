@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Produtos Disponíveis</h1>
+    <div id="products-container" class="product-grid">
+    </div>
+
+    <div class="cart-section">
+        <h2>Meu Carrinho</h2>
+        <ul id="cart-items">
+        </ul>
+        <p>Total de Itens: <span id="cart-total-quantity">0</span></p>
+        <button onclick="checkout()" class="checkout-button">Finalizar Compra</button>
+    </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
