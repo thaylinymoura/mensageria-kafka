@@ -3,7 +3,7 @@
 **Disciplina:** Software Concorrente e Distribuído
 **Curso:** Bacharelado em Engenharia de Software
 
-## Componentes do Grupo
+## Aluna:
 * [Thayliny Alves de Moura]
 
 
