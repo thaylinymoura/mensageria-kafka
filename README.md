@@ -65,9 +65,18 @@ Antes de executar, certifique-se de que você tem os seguintes softwares instala
       # Tópico para eventos de resultado do inventário
       bin/kafka-topics.sh --create --topic inventory-events --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
       ```
+      * Vizualizando mensagens do servidor Kafka
+    ```sh
+     # Tópico orders
+      bin/kafka-console-consumer.sh \--bootstrap-server localhost:9092 \--topic orders \ --from-beginning
+
+      # Tópico inventory-events
+      bin/kafka-console-consumer.sh \ --bootstrap-server localhost:9092 \ --topic inventory-events \--from-beginning
+      ```
 
 3.  **Configuração dos Serviços:**
     * Em cada um dos três projetos (`order-service`, `inventory-service`), verifique o arquivo `src/main/resources/application.properties` (ou `.yml`) e ajuste as credenciais do banco de dados (`spring.datasource.password`).
+      
 
 4.  **Executando os Microsserviços:**
     * Abra um terminal para cada um dos três projetos.
