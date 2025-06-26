@@ -3,7 +3,7 @@ let cart = []; // Array para armazenar os itens no carrinho
 // Função para carregar e exibir os produtos
 async function loadProducts() {
     try {
-        const response = await fetch('/products'); // Chamada para o endpoint REST
+        const response = await fetch('http://localhost:8080/products'); // Chamada para o endpoint REST
         const products = await response.json();
         const productsContainer = document.getElementById('products-container');
         productsContainer.innerHTML = ''; // Limpa o container antes de adicionar os produtos
@@ -12,11 +12,11 @@ async function loadProducts() {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
             productCard.innerHTML = `
-                <img src="${prod.imageUrl}" alt="${prod.nome}">
+                <img src="${prod.image_url}" alt="${prod.nome}">
                 <h3>${prod.nome}</h3>
                 <p>${prod.descricao}</p>
                 <p class="price">R$ ${prod.preco.toFixed(2)}</p>
-                <p>Estoque: ${prod.estoqueQuantidade}</p>
+                <p>Estoque: ${prod.estoque_quantidade}</p>
                 <button onclick="addToCart(${prod.id}, '${prod.nome}')" class="add-to-cart-button">Adicionar ao Carrinho</button>
             `;
             productsContainer.appendChild(productCard);
@@ -71,7 +71,7 @@ async function checkout() {
     };
 
     try {
-        const response = await fetch('/orders', {
+        const response = await fetch('http://localhost:8080/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

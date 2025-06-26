@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.kafka.common.protocol.types.Field;
+
 
 @Data
 @AllArgsConstructor
@@ -12,8 +12,8 @@ import org.apache.kafka.common.protocol.types.Field;
 @Builder
 public class OrderItemDTO {
 
-    private Long productId; // O ID do produto (agora Long)
-    private Integer quantity; // A quantidade desejada desse produto
+    private Long productId;
+    private Integer quantity;
 
     public Long getProductId() {
         return productId;

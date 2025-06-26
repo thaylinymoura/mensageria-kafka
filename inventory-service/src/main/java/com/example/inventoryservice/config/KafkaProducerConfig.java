@@ -1,6 +1,6 @@
-package com.example.orderservice.kafka;
-import com.example.orderservice.dto.OrderDTO;
-import com.example.orderservice.model.Order;
+package com.example.inventoryservice.config;
+
+import com.example.inventoryservice.dto.InventoryResponseEvent;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +18,7 @@ public class KafkaProducerConfig {
 
 
     @Bean
-    public ProducerFactory<String, OrderDTO> producerFactory(){
+    public ProducerFactory<String, InventoryResponseEvent> producerFactory(){
         Map<String, Object> config = new HashMap<>();
         config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,"localhost:9092");
         config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
@@ -28,7 +28,7 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public KafkaTemplate<String, OrderDTO> kafkaTemplate() {
+    public KafkaTemplate<String, InventoryResponseEvent> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 }

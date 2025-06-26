@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2 {
-    color: #0056b3;
+    color: #FF1493;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -58,12 +58,12 @@ h1, h2 {
 .product-card .price {
     font-size: 1.1em;
     font-weight: bold;
-    color: #007bff;
+    color: #FF1493;
     margin-bottom: 15px;
 }
 
 .add-to-cart-button {
-    background-color: #28a745;
+    background-color: #FF1493;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -74,7 +74,7 @@ h1, h2 {
 }
 
 .add-to-cart-button:hover {
-    background-color: #218838;
+    background-color: #FF69B4;
 }
 
 .cart-section {
@@ -102,7 +102,7 @@ h1, h2 {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
+    background-color: #FF1493;
     color: white;
     border: none;
     border-radius: 5px;
@@ -112,7 +112,7 @@ h1, h2 {
 }
 
 .checkout-button:hover {
-    background-color: #0056b3;
+    background-color: #FF69B4;
 }
 
 /* Responsividade básica */

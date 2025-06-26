@@ -12,21 +12,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProdutoService {
 
-    private final ProdutoRepository produtoRepository; // Injeção do repositório de Produto
+    private final ProdutoRepository produtoRepository;
 
-    /**
-     * Retorna uma lista de todos os produtos disponíveis.
-     * @return Lista de objetos Produto.
-     */
     public List <Produto> getAllProdutos() {
         return produtoRepository.findAll();
     }
 
-    /**
-     * Busca um produto pelo seu ID.
-     * @param id O ID do produto.
-     * @return Um Optional contendo o Produto, se encontrado.
-     */
     public Optional<Produto> getProdutoById(Long id) {
-        return produtoRepository.findById(id);}
+        return produtoRepository.findById(id);
     }
+}

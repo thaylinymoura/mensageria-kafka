@@ -23,10 +23,10 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "notification-group");
 
-        // Configura o Deserializer para converter JSON para o objeto InventoryResponseEvent
+
         JsonDeserializer<InventoryResponseEvent> deserializer = new JsonDeserializer<>(InventoryResponseEvent.class);
         deserializer.setRemoveTypeHeaders(false);
-        deserializer.addTrustedPackages("*"); // Permite a deserialização de qualquer pacote
+        deserializer.addTrustedPackages("*");
         deserializer.setUseTypeMapperForKey(true);
 
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), deserializer);

@@ -11,17 +11,17 @@ import jakarta.persistence.Id;
 import java.math.BigDecimal;
 
 
-@Entity // Indica que esta classe é uma entidade JPA
-@Table (name = "produto") // Mapeia para a tabela 'produto' no seu MySQL
-@Data // Anotação Lombok para gerar getters, setters, toString, equals e hashCode
-@AllArgsConstructor // Anotação Lombok para gerar construtor com todos os argumentos
-@NoArgsConstructor // Anotação Lombok para gerar construtor sem argumentos
+@Entity
+@Table (name = "produto")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class Produto {
 
-    @Id // Marca o campo 'id' como a chave primária
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Usaremos UUID para identificadores de produto
+    private Long id;
     private String nome;
     private String descricao;
 
@@ -29,10 +29,10 @@ public class Produto {
     private BigDecimal preco;
 
     @Column(name = "image_url")
-    private String image_url;// Corresponde à coluna 'image_url' no banco de dados
+    private String image_url;
 
     @Column(name = "estoque_quantidade")
-    private Integer estoque_quantidade; // Corresponde à coluna 'estoque_quantidade'
+    private Integer estoque_quantidade;
 
 
     public Long getId() {

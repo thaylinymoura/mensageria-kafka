@@ -9,6 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InventoryResponseEvent {
     private Long orderId;
-    private String status; // "SUCCESS" ou "FAILED"
-    private String message;
+    private String status;
 }

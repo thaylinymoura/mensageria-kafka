@@ -15,9 +15,9 @@ import java.util.List;
 @Getter
 public class OrderDTO {
 
-    private Long id; // ID agora é Long (INT no banco)
+    private Long id;
     private LocalDateTime dataPedido;
-    private String status; // Ex: "PENDENTE", "PROCESSANDO", "CONCLUIDO", "FALHOU"
+    private String status;
     private BigDecimal total;
 
     private List<OrderItemDTO>items;
